@@ -36,6 +36,17 @@
   }
   .call-phone {
     margin-bottom: 5px;
+     img {
+    width: 20px;
+    height: 20px;
+  }
+  a {
+    padding: 10px;
+    display: inline-block;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
   }
   .call-email {
     a {
