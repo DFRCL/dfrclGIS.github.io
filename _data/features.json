@@ -1,27 +1,28 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "GIS",
+    "description": "Spatial analysis
+    ",
     "image": {
-      "url": "images/features/noun_branding_1885335.svg",
+      "url": "/images/features/map.svg",
       "width": 80,
       "height": 80
     }
   },
   {
-    "title": "Certified Accountants",
+    "title": "CAD",
     "description": "All members of our team are certified accountants.",
     "image": {
-      "url": "images/features/noun_The Process_1885341.svg",
+      "url": "/images/features/blueprint.svg",
       "width": 80,
       "height": 80
     }
   },
   {
-    "title": "Tax Compliance",
+    "title": "Remote sensing",
     "description": "We stay up to date on the latest changes to the tax code.",
     "image": {
-      "url": "images/features/noun_3d modeling_1885342.svg",
+      "url": "images/features/satellite",
       "width": 80,
       "height": 80
     }
