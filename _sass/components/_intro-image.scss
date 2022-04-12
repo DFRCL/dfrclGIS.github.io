@@ -28,7 +28,7 @@
   }
 }
 .intro-image-hide-mobile {
-  display: none;
+  display: true;
   @include media-breakpoint-up(md) {
     display: block;
   }
