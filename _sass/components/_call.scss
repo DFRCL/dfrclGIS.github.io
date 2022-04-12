@@ -41,16 +41,19 @@
     height: 16px;
     color: $black;
     }
+  a {
+      color: $black;
+    }
   }
   }
   .call-email {
-     img {
+    a {
+      color: $black;
+    }
+    img {
     width: 16px;
     height: 16px;
     color: $black;
-    }
-    a {
-      color: $black;
     }
   }
   strong {
