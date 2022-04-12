@@ -1,5 +1,5 @@
 ---
-title: Jekyll Serif Theme
+title: Home
 layout: home
 description: Jekyll Serif contains content types for a typical business website. The
   theme is fully responsive, blazing fast and artfully illustrated.
@@ -12,4 +12,4 @@ show_call_box: true
 # Douglas Castillo
 
 Hi there! Welcome to my website.
-Feel free to checkout some of my latests works and services I can provide you.
+Feel free to checkout some of my latests works.
