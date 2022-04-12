@@ -22,7 +22,7 @@
     "title": "Remote sensing",
     "description": "We stay up to date on the latest changes to the tax code.",
     "image": {
-      "url": "images/features/satellite",
+      "url": "images/features/satellite.svg",
       "width": 80,
       "height": 80
     }
