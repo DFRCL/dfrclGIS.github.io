@@ -5,7 +5,7 @@ description: Jekyll Serif contains content types for a typical business website.
   theme is fully responsive, blazing fast and artfully illustrated.
 intro_image: images/illustrations/contours.svg
 intro_image_absolute: true
-intro_image_hide_on_mobile: true
+intro_image_hide_on_mobile: false
 show_call_box: true
 
 ---
