@@ -15,7 +15,7 @@ collections:
     output: true
   team:
     output: true
-  posts:
+  projects:
     output: true
     folder: '_projects'
     permalink: "/projects/:name"
