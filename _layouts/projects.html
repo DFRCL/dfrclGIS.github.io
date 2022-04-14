@@ -27,6 +27,9 @@ bodyClass: "projects"
           <h2 class="service-title">
             <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
           </h2>
+          {% if page.intro_image %}
+	        <img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}" />
+	        {% endif %}
           <p>{{ project.content | markdownify | strip_html | truncate: 100 }}</p>
         </div>
       </div>
