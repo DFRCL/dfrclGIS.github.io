@@ -17,8 +17,6 @@ collections:
     output: true
   projects:
     output: true
-    folder: '_projects'
-    permalink: "/projects/:name"
 
 defaults:
   - scope:
@@ -33,9 +31,9 @@ defaults:
       layout: "team"
   - scope:
       path: ""
-      type: "posts"
+      type: "projects"
     values:
-      layout: "posts"
+      layout: "project"
 
 sass:
   indentWidth: 4
