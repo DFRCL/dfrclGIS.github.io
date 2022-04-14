@@ -1,6 +1,6 @@
 ---
-title: Posts
-layout: posts
+title: Projects
+layout: projects
 description: Latest works
 intro_image: "images/illustrations/contours.svg"
 intro_image_absolute: true
