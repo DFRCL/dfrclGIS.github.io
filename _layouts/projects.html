@@ -25,7 +25,7 @@ bodyClass: "projects"
       <div class="service service-summary">
         <div class="service-content">
           <h2 class="service-title">
-            <a href="{{ post.url | relative_url }}">{{ project.title }}</a>
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
           </h2>
           <p>{{ project.content | markdownify | strip_html | truncate: 100 }}</p>
         </div>
