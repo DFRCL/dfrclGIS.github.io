@@ -1,7 +1,7 @@
 [
   {
     "title": "GIS",
-    "description": "<ul><li></li>Geospatial data collection and handling<li>Digital cartography</li><li>Spatial analysis</li></ul>",
+    "description": "<ul><li>Geospatial data collection and handling</li><li>Digital cartography</li><li>Spatial analysis</li></ul>",
     "image": {
       "url": "/images/features/map.svg",
       "width": 80,
@@ -10,7 +10,7 @@
   },
   {
     "title": "CAD",
-    "description": "",
+    "description": "<ul><li>3D modelling</li><li>Land survey data processing and drafting</li><li>Terrain analysis</li></ul>",
     "image": {
       "url": "/images/features/blueprint.svg",
       "width": 80,
@@ -19,7 +19,7 @@
   },
   {
     "title": "Remote sensing",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "description": "<ul><li>Active and passive sensors</li><li>Aerial photogrammetry</li><li></li>Land applications</ul>",
     "image": {
       "url": "images/features/satellite.svg",
       "width": 80,
