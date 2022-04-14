@@ -9,7 +9,7 @@ intro_image_hide_on_mobile: false
 show_call_box: true
 
 ---
-# Douglas Castillo
+# Welcome
 
 Hi there! Welcome to my website.
-Feel free to checkout some of my latests works.
+Feel free to checkout some of my latests works or contact me.
