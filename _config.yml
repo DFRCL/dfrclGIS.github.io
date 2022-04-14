@@ -17,6 +17,8 @@ collections:
     output: true
   posts:
     output: true
+    folder: _posts
+    permalink: "/blog/:name"
 
 defaults:
   - scope:
