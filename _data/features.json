@@ -1,7 +1,7 @@
 [
   {
     "title": "GIS",
-    "description": "<ul><li>Geospatial data collection and handling</li><li>Digital cartography</li><li>Spatial analysis</li></ul>",
+    "description": "Geospatial data collection and handling<br>Digital cartography<br>Spatial analysis",
     "image": {
       "url": "/images/features/map.svg",
       "width": 80,
@@ -10,7 +10,7 @@
   },
   {
     "title": "CAD",
-    "description": "<ul><li>3D modelling</li><li>Land survey data processing and drafting</li><li>Terrain analysis</li></ul>",
+    "description": "3D modelling<br>Land survey data processing and drafting<br>Terrain analysis",
     "image": {
       "url": "/images/features/blueprint.svg",
       "width": 80,
@@ -19,7 +19,7 @@
   },
   {
     "title": "Remote sensing",
-    "description": "<ul><li>Active and passive sensors</li><li>Aerial photogrammetry</li><li>Land applications</li></ul>",
+    "description": "Active and passive sensors<br>Aerial photogrammetry<br>Land applications",
     "image": {
       "url": "images/features/satellite.svg",
       "width": 80,
