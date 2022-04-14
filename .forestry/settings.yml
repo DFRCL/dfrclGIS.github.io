@@ -20,6 +20,11 @@ sections:
   label: Services
   create: all
   match: "**/*"
+- type: posts
+  path: _posts
+  label: Posts
+  create: all
+  match: "**/*"
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
