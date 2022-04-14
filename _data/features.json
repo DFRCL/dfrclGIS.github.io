@@ -19,7 +19,7 @@
   },
   {
     "title": "Remote sensing",
-    "description": "<ul><li>Active and passive sensors</li><li>Aerial photogrammetry</li><li></li>Land applications</ul>",
+    "description": "<ul><li>Active and passive sensors</li><li>Aerial photogrammetry</li><li>Land applications</li></ul>",
     "image": {
       "url": "images/features/satellite.svg",
       "width": 80,
