@@ -20,14 +20,14 @@ bodyClass: "posts"
 
 <div class="container pt-6 pb-6">
   <div class="row">
-    {% for post in site.posts %}
+    {% for project in site.projects %}
     <div class="col-12 col-md-6 mb-3">
       <div class="service service-summary">
         <div class="service-content">
           <h2 class="service-title">
-            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <a href="{{ post.url | relative_url }}">{{ project.title }}</a>
           </h2>
-          <p>{{ post.content | markdownify | strip_html | truncate: 100 }}</p>
+          <p>{{ project.content | markdownify | strip_html | truncate: 100 }}</p>
         </div>
       </div>
     </div>
