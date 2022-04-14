@@ -29,6 +29,11 @@ defaults:
       type: "team"
     values:
       layout: "team"
+   - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
 
 sass:
   indentWidth: 4
