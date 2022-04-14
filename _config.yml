@@ -29,7 +29,7 @@ defaults:
       type: "team"
     values:
       layout: "team"
-   - scope:
+  - scope:
       path: ""
       type: "posts"
     values:
