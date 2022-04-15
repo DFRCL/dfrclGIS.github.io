@@ -29,7 +29,7 @@ bodyClass: "projects"
           </h2>
 	  {% if project.tags.size >= 1 %}
 		<div class="post-tag">
-			{% for tag in page.tags %}
+			{% for tag in project.tags %}
 				<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
 			{% endfor %}
 		</div>
