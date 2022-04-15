@@ -13,5 +13,5 @@ This project included cluster analysis for a series of event points with geograp
 Initially, implementation of K-means was undertaken, for determining the optimal cluster number a silhouette score was computed, allowing for assessing the overall accuracy of the proposed K.
 
 The results maps were generated using the Folium module in Python 3. 
-
+{% include /maps/kmeans.html %}
 {% include /maps/clusters.html %}
