@@ -15,6 +15,7 @@ fields:
   name: description
   label: description
 pages:
+- _projects/Burn scar detection using Google Earth Engine.md
 - _projects/cluster-analysis-with-python.md
 - _projects/guatemala-2018-census-web-map.md
 - _projects/imagen-optica-compuesta-basada-en-indices-espectrales-con-sentinel-2.md
