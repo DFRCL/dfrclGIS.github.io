@@ -1,12 +1,12 @@
 ---
 title: Imágen óptica compuesta basada en índices espectrales con Sentinel-2
-tags: ''
+tags: Google Earth Engine
 intro_image: "/images/images/composite-sentinel2.png"
-intro_image_absolute: true
-intro_image_hide_on_mobile: false
 description: Generación de imagen compuesta en bandas RGB a partir de índices multiespectrales
   con imágenes de Sentinel 2 (Reflectancia de superficie)., para mostrar una clasificación
   básica del territorio guatemalteco.
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
 
 ---
 Inicialmente se realizó un mosaico a partir de imágenes de Sentinel-2 (resolución 10 m) disponibles a través de la API de Google Earth Engine para el territorio de Guatemala. Con el objetivo de reducir la influencia de sombras, nubosidad y fenología se generó la mediana de un año de imágenes (período 2019-2020) para producir el mosaico. A continuación se presenta el mosaico.
