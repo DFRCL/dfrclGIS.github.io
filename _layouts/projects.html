@@ -28,7 +28,7 @@ bodyClass: "projects"
             <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
           </h2>
           {% if project.intro_image %}
-	        <img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}" />
+	        <img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}" width="auto" height="200 px"/>
 	  {% endif %}
           <p>{{ project.description}}</p>
         </div>
