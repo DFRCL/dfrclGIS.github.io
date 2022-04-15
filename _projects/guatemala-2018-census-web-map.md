@@ -15,7 +15,8 @@ Another heatmap map was created to show population distribution in the country. 
 
 The code used for generating the web map is the following:
 
-    ```javascript
+
+```javascript
 
     <head>
        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
@@ -124,5 +125,4 @@ The code used for generating the web map is the following:
     L.control.scale().addTo(mymap);
     
     </script>
-
-    ```
+```
