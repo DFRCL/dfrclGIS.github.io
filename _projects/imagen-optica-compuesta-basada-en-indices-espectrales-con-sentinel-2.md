@@ -12,7 +12,7 @@ intro_image_hide_on_mobile: false
 Inicialmente se realizó un mosaico a partir de imágenes de Sentinel-2 (resolución 10 m) disponibles a través de la API de Google Earth Engine para el territorio de Guatemala. Con el objetivo de reducir la influencia de sombras, nubosidad y fenología se generó la mediana de un año de imágenes (período 2019-2020) para producir el mosaico. A continuación se presenta el mosaico.
 
 {% raw %}
-<iframe src="[https://douglasferdycl.users.earthengine.app/view/mosaicosentinel-2](https://douglasferdycl.users.earthengine.app/view/mosaicosentinel-2 "https://douglasferdycl.users.earthengine.app/view/mosaicosentinel-2")" width="100%" height="600px"></iframe>
+<iframe src="https://douglasferdycl.users.earthengine.app/view/mosaicosentinel-2" width="100%" height="600px"></iframe>
 {% endraw %}
 
 A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis consistente en varios índices espectrales: NDVI, MNDWI y BSI. La imagen generada para mostrar la clasificación es una composición RGB de los tres índices, por lo que se puede inferir lo siguiente:
@@ -24,7 +24,7 @@ A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis 
 5. Las áreas en negro son zonas que tienden a ser superficies urbanas pero con baja reflectancia, por lo que exhiben un valor bajo en la mayoría de las bandas.
 
 {% raw %}
-<iframe src="[https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar](https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar "https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar")" width="100%" height="600px"></iframe>
+<iframe src="https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar" width="100%" height="600px"></iframe>
 {% endraw %}
 
 ```Javascript
