@@ -1,6 +1,6 @@
 ---
 title: Multispectral indices composite
-tags: Google Earth Engine
+tags: Google-Earth-Engine
 intro_image: "/images/images/composite-sentinel2.png"
 description: Generation of RGB composite using multispectral indexes for enhaced visualization of land cover over Guatemala using Sentinel-2 MSI imagery.
 intro_image_absolute: true
