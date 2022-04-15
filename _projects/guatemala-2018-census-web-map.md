@@ -3,7 +3,6 @@ title: Guatemala 2018 census web map
 tags: Web maps, leaflet
 intro_image: "/images/images/mapa_censo.png"
 description: Interactive web map of Guatemala's census data from 2018, using Leaflet.js
-published: false
 
 ---
 To generate this web map, census data was obtained from Guatemala National Statistics Institute (INE), then it was joined through GIS data relations to create a layer for municipalities.
