@@ -15,6 +15,7 @@ fields:
   name: description
   label: description
 pages:
+- _projects/1-50-000-atlas-of-guatemala.md
 - _projects/cluster-analysis-with-python.md
 - _projects/guatemala-2018-census-web-map.md
 - _projects/openstreetmaps-contributions.md
