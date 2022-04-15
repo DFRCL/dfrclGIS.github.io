@@ -9,7 +9,7 @@ To generate this web map, census data was obtained from Guatemala National Stati
 
 The census data layer was uploaded via QGIS to a PostGIS database, and then plotted using Leaflet. Then population density was computed using existing attributes, it was applied styling based on the population density variable. It was implemented with popups to show information interactively.
 
-    {% include /maps/gc2018.html %}
+{% include /maps/gc2018.html %}
 
 Another heatmap map was created to show population distribution in the country. The hotspot analysis was performed using QGIS and then uploaded to Mapbox to create a custom style to be displayed with Leaflet.js on website.
 
