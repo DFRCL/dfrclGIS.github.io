@@ -1,12 +1,22 @@
 ---
 title: Geoserver
-tags: Web GIS
+tags: []
 intro_image: images/GeoServer_Logo.svg
-description: Implementación de ejemplo de geoserver en Azure.
+description: 'Test implementation for GeoServer on Microsoft Azure web services '
+
 ---
+Test implementation for GeoServer, having a PostGIS data container, and serving Web services like WMS, WFS, WCS.
 
-Financial accounting (or financial accountancy) is the field of accounting concerned with the **summary, analysis and reporting** of financial transactions related to a business.
+You can access the example implementation services at:
 
-# Objectives 
+> [https://geoserverdouglascl.azurewebsites.net/geoserver/web/](https://geoserverdouglascl.azurewebsites.net/geoserver/web/ "https://geoserverdouglascl.azurewebsites.net/geoserver/web/")
 
-Financial accounting and financial reporting are often used as synonyms.
+Or you can access hosted information through the following web services:
+
+**WMS:** [https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities](https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities "https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities")
+
+**WFS:** [https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wfs&version=1.0.0&request=GetCapabilities](https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wfs&version=1.0.0&request=GetCapabilities "https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wfs&version=1.0.0&request=GetCapabilities")
+
+**WCS:** [https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wcs&version=1.0.0&request=GetCapabilities](https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wcs&version=1.0.0&request=GetCapabilities "https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wcs&version=1.0.0&request=GetCapabilities")
+
+![](/images/images/geoserver.png)
