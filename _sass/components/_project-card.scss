@@ -25,16 +25,20 @@
       font-size: 12px;
       line-height: 18px;
       font-weight: bold;
-      border: 1px solid $primary-color;
+      border: 1px solid $primary;
       text-transform: capitalize;
-      color: $primary-color;
-      transition: $global-transition;
+      color: $primary;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
       &:last-child {
         margin-right: 0;
       }
-      &:hover {
-        background: $primary-color;
-        color: $white;
-      }
+    &:hover {
+    color: #ffffff;
+    background-color: lighten($primary, 10%);
+    transform: translateY(-1px);
+    //box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
+    text-decoration: none;
+         }
     }
 }
