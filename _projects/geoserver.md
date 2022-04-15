@@ -1,8 +1,10 @@
 ---
 title: Geoserver
-tags: []
+tags: Web-GIS
 intro_image: images/GeoServer_Logo.svg
-description: 'Test implementation for GeoServer on Microsoft Azure web services '
+description: 'Test implementation for GeoServer on Microsoft Azure web services'
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
 
 ---
 Test implementation for GeoServer, having a PostGIS data container, and serving Web services like WMS, WFS, WCS.
