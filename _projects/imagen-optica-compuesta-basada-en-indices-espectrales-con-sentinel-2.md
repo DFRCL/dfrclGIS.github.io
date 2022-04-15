@@ -2,6 +2,8 @@
 title: Imágen óptica compuesta basada en índices espectrales con Sentinel-2
 tags: ''
 intro_image: "/images/images/composite-sentinel2.png"
+intro_image_absolute: true
+intro_image_hide_on_mobile: false
 description: Generación de imagen compuesta en bandas RGB a partir de índices multiespectrales
   con imágenes de Sentinel 2 (Reflectancia de superficie)., para mostrar una clasificación
   básica del territorio guatemalteco.
@@ -21,6 +23,7 @@ A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis 
 
 <iframe src="[https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar](https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar "https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar")" width="100%" height="600px"></iframe>
 
+```Javascript
     Map.setCenter(-90.3674965,15.8092506,7);
     //Algorithm reference {https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/cby_cloud_detection/}
     
@@ -78,4 +81,4 @@ A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis 
     var guatemala = departamentos.union()
     
     Map.addLayer(indices.clip(guatemala), {min:[0,0,0.1],max:[0.5,1,0.5],  bands: ['nd_2', 'nd', 'nd_1'],}, 'Clases',1);
-    ﻿
+```
