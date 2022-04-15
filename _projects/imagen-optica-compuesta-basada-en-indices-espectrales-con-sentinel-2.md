@@ -23,7 +23,7 @@ A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis 
 4. Naturalmente las zonas con color azul, poseen un alto valor del MNDWI (Modified Normalized Difference Water Index).
 5. Las áreas en negro son zonas que tienden a ser superficies urbanas pero con baja reflectancia, por lo que exhiben un valor bajo en la mayoría de las bandas.
 
-{% endraw %}
+{% raw %}
 <iframe src="[https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar](https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar "https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar")" width="100%" height="600px"></iframe>
 {% endraw %}
 
