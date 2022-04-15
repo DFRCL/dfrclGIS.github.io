@@ -14,4 +14,11 @@ Initially, implementation of K-means was undertaken, for determining the optimal
 
 The results maps were generated using the Folium module in Python 3. 
 
-{% include /maps/clusters.html %}
+{% raw %}
+<script src="https://gist.github.com/DFRCL/45ccfb03601785a448c98d8ec25095e8.js"></script>
+<iframe src="https://douglascl.xyz/assets/maps/kmeans.html" width="100%" height="600px"></iframe>
+<script src="https://gist.github.com/DFRCL/325899d3eb74edc52311469ba5465a91.js"></script>
+<iframe src="https://douglascl.xyz/assets/maps/dbscan.html" width="100%" height="600px"></iframe>
+<script src="https://gist.github.com/DFRCL/8cf3aa4f19b0a6a10a1e8508c82b7ba5.js"></script>
+<iframe src="https://douglascl.xyz/assets/maps/hdbscan.html" width="100%" height="600px"></iframe>
+{% endraw %}
