@@ -36,7 +36,7 @@ bodyClass: "projects"
 	  {% endif %}
           {% if project.intro_image %}
 	<div class = "project-image">
-	        <img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/>
+	        <a href="{{ project.url | relative_url }}"><img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/></a>
 	</div>
 	  {% endif %}
           <p>{{ project.description}}</p>
