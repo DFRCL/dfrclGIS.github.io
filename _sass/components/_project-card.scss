@@ -2,15 +2,13 @@
   }
 .project-image {
     flex: 0 0 auto;
-    max-width:100%;
     display: flex;
     padding: 20px;
     text-align: center;
     object-fit: contain;
   }
   img {
-    width: 100%;
-    height: auto;
+    max-width:100%;
   }
 .project-content{
 }
