@@ -1,33 +1,34 @@
 ---
-title: Imágen óptica compuesta basada en índices espectrales con Sentinel-2
+title: Multispectral indices composite
 tags: Google Earth Engine
 intro_image: "/images/images/composite-sentinel2.png"
-description: Generación de imagen compuesta en bandas RGB a partir de índices multiespectrales
-  con imágenes de Sentinel 2 (Reflectancia de superficie)., para mostrar una clasificación
-  básica del territorio guatemalteco.
+description: Generation of RGB composite using multispectral indexes for enhaced visualization of land cover over Guatemala using Sentinel-2 MSI imagery.
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 
 ---
-Inicialmente se realizó un mosaico a partir de imágenes de Sentinel-2 (resolución 10 m) disponibles a través de la API de Google Earth Engine para el territorio de Guatemala. Con el objetivo de reducir la influencia de sombras, nubosidad y fenología se generó la mediana de un año de imágenes (período 2019-2020) para producir el mosaico. A continuación se presenta el mosaico.
+
+A cloudless mosaic was constructed using Sentinel-2 MSI imagery level 2A (Surface reflectance) available through Google Earth Engine API, the mosaic was subset for Guatemala country boundaries. In order to reduce the influence from shadows, cloud cover and phenologic variations throughout the year, a mean reduction was performed, giving the mean value for each pixel (for 2019-2020 period), to produce the mosaic. You can see the final mosaic here:
 
 {% raw %}
 <iframe src="https://douglasferdycl.users.earthengine.app/view/mosaicosentinel-2" width="100%" height="600px"></iframe>
 {% endraw %}
 
-A partir del mosaico anterior de la misión Sentinel-2 se ejecutó un análisis consistente en varios índices espectrales: NDVI, MNDWI y BSI. La imagen generada para mostrar la clasificación es una composición RGB de los tres índices, por lo que se puede inferir lo siguiente:
+Starting with previous mosaic, the computation of NDVI (Normalized Difference Vegetation Index), MNDWI (Modified Normalized Difference Water Index), and BSI (Bare Soil Index) indices was carried out. Then the resulting indices were mapped to RGB channels to construct a composite image (Red: BSI, G: NDVI, B: MNDWI ), the visible colors can be interpreted in this way:
 
-1. Las áreas en color verde están cubiertas por vegetación con mediana o alta capacidad fotosintética.
-2. Las áreas resaltadas en color rojo, tienen altos valores del índice BSI(Bare soil index), por lo que representan zonas urbanas.
-3. Las zonas que aparecen con colores amarillos representan suelo descubierto, pero que no están cubiertos con materiales artificiales, debido a que poseen un alto valor de BSI, pero no tan bajo de NDVI.
-4. Naturalmente las zonas con color azul, poseen un alto valor del MNDWI (Modified Normalized Difference Water Index).
-5. Las áreas en negro son zonas que tienden a ser superficies urbanas pero con baja reflectancia, por lo que exhiben un valor bajo en la mayoría de las bandas.
+1. Green tones are covered by vegetation with median or high photosintetic activity.
+2. Red tones have high values of BSI, and low values in NDVI and MNDWI, being interpreted as urban areas. 
+3. Yellow tones represent bare soil, as they have high BSI values and lower NDVI and MNDWI, but have higher NDVI than urban areas.
+4. Blue tones are represented as water bodies as result in high MNDWI values. 
+5. Black tones represent surfaces that have low reflectance in all bands, are caracteristic of urban related covers as asphalt. 
+
+The resulting composite image is shown in the following interactive map:
 
 {% raw %}
 <iframe src="https://douglasferdycl.users.earthengine.app/view/clasificacionopticasar" width="100%" height="600px"></iframe>
 {% endraw %}
 
-```Javascript
+```javascript
     Map.setCenter(-90.3674965,15.8092506,7);
     //Algorithm reference {https://custom-scripts.sentinel-hub.com/custom-scripts/sentinel-2/cby_cloud_detection/}
     
