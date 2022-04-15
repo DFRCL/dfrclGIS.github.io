@@ -39,7 +39,7 @@ function onEachFeature(feature, layer) {
                 popupOptions = {maxWidth: 300};
                 layer.bindPopup("<b>Municipio</b>: "+feature.properties.municipio+
 				"<b><br> Población:</b> "+feature.properties.poblacion+" Hab."+
-				"<b><br> Densidad:</b> "+parseFloat(feature.properties.poblacion/feature.properties.shape_area*1000000).toFixed(2)+" Hab/km²",popupOptions);
+				"<b><br> Densidad:</b> "+parseFloat(feature.properties.poblacion/feature.properties.shape_area*1000000).toFixed(0)+" Hab/km²",popupOptions);
             }
 L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {crs: L.CRS.EPSG3857,
 		maxZoom: 18,
