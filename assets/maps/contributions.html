@@ -33,14 +33,16 @@ function onEachFeature(feature, layer) {
                 popupOptions = {maxWidth: 300};
                 layer.bindPopup();
             }
-L.tileLayer('https://api.mapbox.com/styles/dfrcl/ckcfbq1ws027x1ipd9miaiewj/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A', {crs: L.CRS.EPSG3857,
+L.tileLayer('https://api.mapbox.com/styles/v1/dfrcl/ckcfbq1ws027x1ipd9miaiewj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A', {crs: L.CRS.EPSG3857,
 		maxZoom: 18,
 		attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
 			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
 			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(mymap);
+
 
 
 var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="way"><user name="dfrcl"/></query><query type="relation"><user name="dfrcl"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
