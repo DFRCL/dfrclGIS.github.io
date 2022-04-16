@@ -13,7 +13,7 @@ And an overview of my overall contributions to openstreetmaps, you can zoom to s
 
 
 {% raw %}
-<iframe src="https://http://douglascl.xyz/assets/maps/contributions.html" width="100%" height="600px"></iframe>
+<iframe src="https://douglascl.xyz/assets/maps/contributions.html" width="100%" height="600px"></iframe>
 {% endraw %} 
 
 The following map shows the geographic distribution of changes as a heatmap:
