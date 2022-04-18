@@ -15,6 +15,7 @@ High ability to conceptualize remote sensing solutions, choose sensors and proce
 - Aerial photogrammetry. 
 - Time series and change detection.
 
+## Software:
 
 {% raw %}
 <div class="software-card">
