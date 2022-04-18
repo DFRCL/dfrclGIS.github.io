@@ -16,3 +16,15 @@ High ability with CAD for civil engineering and land survey applications.
   - Aspect 
   - Watershed delineation 
   - Contours
+
+## Software
+
+{% raw %}
+<div class="software-card">
+	<div class="tag">AutoCAD Civil 3D
+		<div class="software-image">
+			<img alt="AutoCAD Civil 3D" src="/images/icons8-autodesk-civil-3d-480.svg">
+		</div>
+	</div>
+</div>
+{% endraw %}
