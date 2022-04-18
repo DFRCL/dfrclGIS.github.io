@@ -11,9 +11,8 @@ logo:
   desktop_width: "120px"
 
 collections:
-  services:
+  skills:
     output: true
-     permalink: /skills/:name
   team:
     output: true
   projects:
@@ -22,7 +21,7 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "services"
+      type: "skills"
     values:
       layout: "service"
   - scope:
