@@ -19,7 +19,7 @@ High ability to conceptualize remote sensing solutions, choose sensors and proce
 {% raw %}
 <div class="software-card">
 	<div class="software-image">
-		<img class="img-fluid mb-2" alt="Earth Engine" src="/images/earth_engine.svg"
+		<img class="img-fluid mb-2" alt="Earth Engine" src="/images/earth_engine.svg">
 	</div>
 	<a class="tag" href="/tags">Google Earth Engine</a>
 </div>
