@@ -20,6 +20,7 @@ bodyClass: page-about
                 </div>
             </div>
         </div>
+        {% endfor %}
 
 Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
 de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
