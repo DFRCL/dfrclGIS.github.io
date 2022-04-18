@@ -5,6 +5,12 @@
           <div class="avatar-image">
             <img alt="Douglas Castillo" class="img-fluid mb-2" src="{{  .site.data.contact.image  | relative_url }}" />
           </div>
+           {% if site.data.contact.title %}
+            <div class="team-meta">
+                    <h2 class="team-name">{{ site.data.contact.name }}</h2>
+                    <p class="team-description">{{ site.data.contact.title }}</p>
+                </div>
+           {% endif %}
         </div>
        </div>
     {% endif %}
