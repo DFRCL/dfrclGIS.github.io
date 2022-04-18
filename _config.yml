@@ -42,6 +42,7 @@ sass:
 
 plugins:
   - jekyll-environment-variables
+  - jekyll-image-optim
 
 exclude:
   - Gemfile
