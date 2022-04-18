@@ -37,5 +37,10 @@ Generation of high quality digital cartography for screen, printed or interactiv
 			<img alt="QGIS" src="/images/mapbox-logo.svg">
 		</div>
 	</div>
+        <div class="tag">OpenStreetMaps
+		<div class="software-image">
+			<img alt="OSM" src="/images/Openstreetmap_logo.svg">
+		</div>
+	</div>
 </div>
 {% endraw %}
