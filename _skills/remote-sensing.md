@@ -23,6 +23,11 @@ High ability to conceptualize remote sensing solutions, choose sensors and proce
 		<img class="img-fluid mb-2" alt="Earth Engine" src="/images/earth_engine.svg">
 	</div>
 	</div>
+	<div class="tag">QGIS
+	<div class="software-image">
+		<img class="img-fluid mb-2" alt="QGIS" src="/images/QGIS_logo_new.svg">
+	</div>
+	</div>
 	
 </div>
 {% endraw %}
