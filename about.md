@@ -4,6 +4,22 @@ layout: page
 description: About
 bodyClass: page-about
 ---
+<div class="row pt-6 pb-6">
+        {% assign teams = site.team | where: "promoted", empty | sort: "weight" %}
+        {% for team in teams %}
+        <div class="col-12 col-md-4 mb-3">
+            <div class="team team-summary">
+                {% if team.image %}
+                <div class="team-image">
+                    <img width="60" height="60" alt="{{ team.title }}" class="img-fluid mb-2" src="{{ team.image | relative_url }}" />
+                </div>
+                {% endif %}
+                <div class="team-meta">
+                    <h2 class="team-name"><a href="{{ team.url | relative_url }}">{{ team.title }}</a></h2>
+                    <p class="team-description">{{ team.jobtitle }}</p>
+                </div>
+            </div>
+        </div>
 
 Lorem markdownum aequalis strigis. _Saetigeri iubeas_, vultu huic alvum nondum
 de obside ut laniavit arbor palmis, cum quin. Rupes vetat videndo, armigerae
@@ -51,12 +67,3 @@ et eripiat, gnato. Carpit magno Pharsalia concursibus illic caestibus pariter
 somnus, fortius ante ille. Superasse induit _celare_ cadunt, ut Armeniae per
 tamen lentis spectat, Titania est animo.
 
-```javascript
-function sayHello(name) {
-  if (!name) {
-    console.log('Hello World');
-  } else {
-    console.log(`Hello ${name}`);
-  }
-}
-```
