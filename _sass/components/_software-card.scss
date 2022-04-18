@@ -11,6 +11,7 @@
       border: 1px solid $primary;
       text-transform: capitalize;
       color: $primary;
+      background-color: $white-offset;
       -webkit-transition: all 0.15s ease;
       transition: all 0.15s ease;
       &:last-child {
@@ -18,8 +19,8 @@
          .software-image {
       height: 60px;
       width: 60px;
-      margin-right: 10px;
-      border-radius: 50%;
+      margin-right: auto;
+      margin-left: auto;
       overflow: hidden;
       img {
         width: 60px;
@@ -27,8 +28,8 @@
       }
     }
     &:hover {
-    color: #ffffff;
-    background-color: lighten($primary, 10%);
+    color: $secondary;
+    background-color: lighten($secondary, 10%);
     transform: translateY(-1px);
     //box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
     text-decoration: none;
