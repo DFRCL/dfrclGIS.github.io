@@ -31,7 +31,12 @@
     }
   }
 
-.avatar-img {
+.contact-avatar {
+  .avatar-summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .avatar-image {
       height: 60px;
       width: 60px;
       margin-right: 10px;
@@ -61,7 +66,6 @@
       flex: 1 0 100%;
     }
   }
-	
 	
   .call-name {
     font-size: 1.1rem;
