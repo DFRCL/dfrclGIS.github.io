@@ -25,7 +25,7 @@ Capability to generate source code for geospatial applications and process autom
 	</div>
   	<div class="tag">Javascript
 		<div class="software-image">
-			<img alt="JS" src="/images/JS-logo.svg">
+			<img alt="JS" src="/images/Js-logo.svg">
 		</div>
 </div>
 {% endraw %}
