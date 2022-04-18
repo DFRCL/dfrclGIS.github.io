@@ -13,3 +13,19 @@ Capability to generate source code for geospatial applications and process autom
 - Domain of Python and basic Javascript.
 - Automation and iterative processes in GIS software. 
 - Use of console based applications.
+
+## Software
+
+{% raw %}
+<div class="software-card">
+	<div class="tag">Python
+		<div class="software-image">
+			<img alt="Python" src="/images/Python-logo.svg">
+		</div>
+	</div>
+  	<div class="tag">Javascript
+		<div class="software-image">
+			<img alt="JS" src="/images/JS-logo.svg">
+		</div>
+</div>
+{% endraw %}
