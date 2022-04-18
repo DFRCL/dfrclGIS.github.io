@@ -2,4 +2,4 @@ source "https://rubygems.org"
 
 gem "jekyll"
 gem "jekyll-environment-variables"
-gem "jekyll-image-optim"
+gem "jekyll-compress-images"
