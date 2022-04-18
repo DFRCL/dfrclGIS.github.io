@@ -4,4 +4,4 @@ layout: contact
 description: Contact
 ---
 
-Feel free to contact me through email or Linkedin!
+Feel free to contact me by email or Linkedin!
