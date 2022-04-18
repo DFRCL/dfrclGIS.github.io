@@ -1,6 +1,6 @@
 ---
 title: Skills
-layout: services
+layout: skills
 description: Main skills
 intro_image: "images/illustrations/contours.svg"
 intro_image_absolute: true
