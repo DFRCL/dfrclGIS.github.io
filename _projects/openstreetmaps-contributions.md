@@ -1,7 +1,7 @@
 ---
 title: OpenStreetMaps Contributions
 tags: Web-Maps
-intro_image: "/images/images/oip.jpg"
+intro_image: "/images/Openstreetmap_logo.svg"
 description: My OpenStreetMaps contributions
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
