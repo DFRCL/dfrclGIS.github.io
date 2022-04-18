@@ -16,3 +16,30 @@ Ability to manage geospatial data using several technologies.
 - Generating outputs from geoprocessing results to several data formats.
 - Quality control.
 - Metadata.
+
+## Software
+
+{% raw %}
+<div class="software-card">
+	<div class="tag">QGIS
+		<div class="software-image">
+			<img alt="QGIS" src="/images/QGIS_logo_new.svg">
+		</div>
+	</div>
+  	<div class="tag">Esri Suite
+		<div class="software-image">
+			<img alt="Esri" src="/images/Esri-01.svg">
+	        </div>
+        </div>
+        <div class="tag">PostGIS
+		<div class="software-image">
+			<img alt="Esri" src="/images/Postresql_elephant.svg">
+	        </div>
+        </div>
+        <div class="tag">GeoServer
+		<div class="software-image">
+			<img alt="GeoServer" src="/images/GeoServer_logo.svg">
+	        </div>
+        </div>
+</div>
+{% endraw %}
