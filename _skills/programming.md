@@ -14,7 +14,7 @@ Capability to generate source code for geospatial applications and process autom
 - Automation and iterative processes in GIS software. 
 - Use of console based applications.
 
-## Software
+## Languages
 
 {% raw %}
 <div class="software-card">
