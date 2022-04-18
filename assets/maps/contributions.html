@@ -31,7 +31,7 @@ function style(feature) {
 
 function onEachFeature(feature, layer) {
                 popupOptions = {maxWidth: 300};
-                layer.bindPopup('<b>Click on link for more details: </b><br><a href = "https://openstreetmap.org/'+feature.properties.id+'">'+feature.properties.id+"<a>");
+                layer.bindPopup('<b>Click on link for more details: </b><br><a href = "https://openstreetmap.org/'+feature.properties.id+'" target="_blank">'+feature.properties.id+"<a>");
             }
 L.tileLayer('https://api.mapbox.com/styles/v1/dfrcl/ckcfbq1ws027x1ipd9miaiewj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A', {crs: L.CRS.EPSG3857,
 		maxZoom: 18,
