@@ -11,8 +11,9 @@ Test implementation for GeoServer, having a PostGIS data container, and serving 
 
 You can access the example implementation services at:
 
-> [https://geoserverdouglascl.azurewebsites.net/geoserver/web/](https://geoserverdouglascl.azurewebsites.net/geoserver/web/ "https://geoserverdouglascl.azurewebsites.net/geoserver/web/")
-
+{% raw %}
+<div class="call-box-bottom"><a href="https://geoserverdouglascl.azurewebsites.net/geoserver/web/" class="button">Access geoserver</a></div>
+{% endraw %}
 Or you can access hosted information through the following web services:
 
 **WMS:** [https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities](https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities "https://geoserverdouglascl.azurewebsites.net/geoserver/ows?service=wms&version=1.1.1&request=GetCapabilities")
