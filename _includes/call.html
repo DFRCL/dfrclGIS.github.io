@@ -18,8 +18,12 @@
       </div>
     {% endif %}
     {% if include.show_image %}
-       <div class="avatar-image">
+      <div class = "avatar">
+        <div class = "avatar-summary">
+          <div class="avatar-image">
             <img width="90" height="90" alt="Douglas Castillo" class="img-fluid mb-2" src="{{  .site.data.contact.image  | relative_url }}" />
+          </div>
+        </div>
        </div>
     {% endif %}
 </div>
