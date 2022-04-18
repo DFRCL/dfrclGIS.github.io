@@ -1,8 +1,16 @@
 <div class="call">
+  {% if include.show_image %}
+      <div class = "avatar">
+        <div class = "avatar-summary">
+          <div class="avatar-image">
+            <img width="90" height="90" alt="Douglas Castillo" class="img-fluid mb-2" src="{{  .site.data.contact.image  | relative_url }}" />
+          </div>
+        </div>
+       </div>
+    {% endif %}
   <div class="call-box-top">
     {% if site.data.contact.linkedinurl %}
         <div class="call-phone"><a href="{{ .site.data.contact.linkedinurl }}" target="blank"><img src="https://douglascl.xyz/images/social/linkedin2.svg" title="Linkedin" alt="Linkedin" />/dfrcl</a> </div>
-          
     {% endif %}
     {% if site.data.contact.email %}
     <div class="call-email"><img src="https://douglascl.xyz/images/social/envelope-solid.svg" title="mail" alt="e-mail" />
@@ -16,14 +24,5 @@
       <div class="call-box-bottom">
         <a href="{{ site.data.contact.contact_button_link }}" class="button">Contact</a>
       </div>
-    {% endif %}
-    {% if include.show_image %}
-      <div class = "avatar">
-        <div class = "avatar-summary">
-          <div class="avatar-image">
-            <img width="90" height="90" alt="Douglas Castillo" class="img-fluid mb-2" src="{{  .site.data.contact.image  | relative_url }}" />
-          </div>
-        </div>
-       </div>
     {% endif %}
 </div>
