@@ -11,7 +11,9 @@ To generate this web map, census data was obtained from Guatemala National Stati
 
 The census data layer was uploaded via QGIS to a PostGIS database, and then plotted using Leaflet. Then population density was computed using existing attributes, it was applied styling based on the population density variable. It was implemented with popups to show information interactively.
 
-{% include /maps/gc2018.html %}
+{% raw %}
+
+<iframe src="https://douglascl.xyz/assets/maps/censo2018.html" width="100%" height="600px"></iframe> {% endraw %}
 
 The code used for generating the web map is the following:
 
