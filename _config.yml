@@ -61,3 +61,9 @@ highlighter: rouge
 
 kramdown:
   input: GFM
+  
+# image_optim-jekyll-plugin customizations.
+image_optim:
+  archive_dir: "assets/optimized_images"
+  cache_file: "tmp/img-cache.yml"
+  image_glob: "/images/**/*.{gif,png,jpg,jpeg}"
