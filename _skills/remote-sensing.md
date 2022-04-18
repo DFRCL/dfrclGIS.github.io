@@ -20,17 +20,17 @@ High ability to conceptualize remote sensing solutions, choose sensors and proce
 <div class="software-card">
 	<div class="tag">Google Earth Engine
 		<div class="software-image">
-			<img class="img-fluid mb-2" alt="Earth Engine" src="/images/earth_engine.svg">
+			<img alt="Earth Engine" src="/images/earth_engine.svg">
 		</div>
 	</div>
 	<div class="tag">QGIS
 		<div class="software-image">
-			<img class="img-fluid mb-2" alt="QGIS" src="/images/QGIS_logo_new.svg">
+			<img alt="QGIS" src="/images/QGIS_logo_new.svg">
 		</div>
 	</div>
 	<div class="tag">Autocad Civil 3D
 		<div class="software-image">
-			<img class="img-fluid mb-2" alt="QGIS" src="/images/icons8-autodesk-civil-3d-480.svg">
+			<img alt="QGIS" src="/images/icons8-autodesk-civil-3d-480.svg">
 		</div>
 	</div>
 	
