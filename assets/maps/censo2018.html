@@ -1,0 +1,84 @@
+<head>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+<div id="map1" style="width: 100%; height: 500px"></div>
+
+<script>
+var mymap = L.map('map1').setView([15.8760489,-89.9221243], 7);
+
+
+var geojsonLayer = new L.GeoJSON.AJAX("https://dfrcl.github.io/geojsons.github.io/municipios.geojson", {
+	    maxZoom: 10,
+	    attribution: '| Douglas Castillo, '+'<a href="https://www.censopoblacion.gt/">INE Guatemala</a> ',
+            style: style,
+            onEachFeature: onEachFeature
+        });       
+geojsonLayer.addTo(mymap);   
+
+
+function getColor(d) {
+    return d > 2205  ? '#fdfa18' :
+           d > 1425  ? '#8fd744' :
+           d > 847   ? '#35b779' :
+           d > 586   ? '#20908d' :
+           d > 338   ? '#31688e' :
+           d > 166   ? '#443A83' :
+           d > 0     ? '#440154' :
+                      '#FFFFFF';
+}
+
+function style(feature) {
+    return {
+        fillColor: getColor(feature.properties.poblacion/feature.properties.shape_area*1000000),
+        weight: 2,
+        opacity: 1,
+        color: 'white',
+        dashArray: '3',
+        fillOpacity: 0.8
+    };
+}
+
+function onEachFeature(feature, layer) {
+                popupOptions = {maxWidth: 300};
+                layer.bindPopup("<b>Municipio</b>: "+feature.properties.municipio+
+				"<b><br> Población:</b> "+feature.properties.poblacion+" Hab."+
+				"<b><br> Densidad:</b> "+parseFloat(feature.properties.poblacion/feature.properties.shape_area*1000000).toFixed(0)+" Hab/km²",popupOptions);
+            }
+L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {crs: L.CRS.EPSG3857,
+		maxZoom: 18,
+		attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+var legend = L.control({position: 'bottomright'});
+
+legend.onAdd = function (map) {
+
+    var div = L.DomUtil.create('div', 'info legend'),
+        grades = [0, 166, 338, 586, 847,1425,2205],
+        labels = [];
+
+    // loop through our density intervals and generate a label with a colored square for each interval
+    for (var i = 0; i < grades.length; i++) {
+        div.innerHTML +=
+            '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
+            grades[i] + (grades[i + 1] ? '–' + grades[i + 1] + ' Hab/km²<br>' : '+');
+    }
+
+    return div;
+};
+
+legend.addTo(mymap);
+L.control.scale().addTo(mymap);
+
+</script>
