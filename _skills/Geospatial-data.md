@@ -5,7 +5,7 @@ featured: true
 weight: "1"
 
 ---
-#Geospatial data 
+# Geospatial data 
 
 - Handling of geospatial data in raster and vectorial formats. 
 - Geodatabases (ESRI Geodatabases, PostGIS). 
