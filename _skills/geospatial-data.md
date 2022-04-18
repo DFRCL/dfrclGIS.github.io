@@ -33,12 +33,12 @@ Ability to manage geospatial data using several technologies.
         </div>
         <div class="tag">PostGIS
 		<div class="software-image">
-			<img alt="Esri" src="/images/Postresql_elephant.svg">
+			<img alt="Esri" src="/images/Postgresql_elephant.svg">
 	        </div>
         </div>
         <div class="tag">GeoServer
 		<div class="software-image">
-			<img alt="GeoServer" src="/images/GeoServer_logo.svg">
+			<img alt="GeoServer" src="/images/GeoServer_Logo.svg">
 	        </div>
         </div>
 </div>
