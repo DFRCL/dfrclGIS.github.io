@@ -5,10 +5,10 @@ featured: true
 weight: "1"
 
 ---
-* Handling of geospatial data in raster and vectorial formats. 
-* Geodatabases (ESRI Geodatabases, PostGIS). 
-* Conversion between different formats. 
-* Implementation of web services (Geoserver). 
-* Consuming and querying data from API REST services. 
-* Parsing geospatial data in several formats. 
-* Metadata.
+-Handling of geospatial data in raster and vectorial formats. 
+-Geodatabases (ESRI Geodatabases, PostGIS). 
+-Conversion between different formats. 
+-Implementation of web services (Geoserver). 
+-Consuming and querying data from API REST services. 
+-Parsing geospatial data in several formats. 
+-Metadata.
