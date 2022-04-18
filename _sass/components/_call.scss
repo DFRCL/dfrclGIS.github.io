@@ -71,3 +71,40 @@
     }
   }
 }
+
+.avatar {
+  .avatar-summary {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .avatar-image {
+      height: 60px;
+      width: 60px;
+      margin-right: 10px;
+      border-radius: 50%;
+      overflow: hidden;
+      img {
+        width: 60px;
+      }
+    }
+    .avatar-meta {
+      flex: 1;
+      h2 {
+        margin: 0;
+        font-size: 22px;
+        font-weight: normal;
+      }
+      p {
+        color: $black;
+        text-transform: uppercase;
+        margin: 0;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+    .avatar-content {
+      margin-top: 20px;
+      flex: 1 0 100%;
+    }
+  }
+}
