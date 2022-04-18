@@ -1,0 +1,50 @@
+<!-- DOCTYPE html-->
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src='https://douglascl.xyz/assets/js/osmtogeojson.js'></script> 
+<script type="text/javascript" src="https://unpkg.com/heatmap.js@2.0.2/heatmap.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.heat/0.2.0/leaflet-heat.js"></script>
+<script src="https://unpkg.com/@turf/turf@6/turf.min.js"></script>
+
+
+<div id="map1" style="width: 100%; height: 100%"></div>
+
+<script>
+var mymap = L.map('map1').setView([15.8760489,-89.9221243], 7);
+
+coords = []; //define an array to store coordinates
+function onEachFeature(feature, layer) {
+				coords.push([feature.geometry.coordinates[1],feature.geometry.coordinates[0]]); 
+            }
+
+L.tileLayer('https://api.mapbox.com/styles/v1/dfrcl/ckcfbq1ws027x1ipd9miaiewj/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A', {crs: L.CRS.EPSG3857,
+		maxZoom: 18,
+		attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+			'<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+			'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+		id: 'mapbox/streets-v11',
+		tileSize: 512,
+		zoomOffset: -1
+	}).addTo(mymap);
+
+
+var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="node"><user name="dfrcl"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
+
+$.get(osmurl, function (osmDataAsJson) {
+          var resultAsGeojson = osmtogeojson(osmDataAsJson);
+		  var geojsonLayer = new L.geoJson(resultAsGeojson, {
+            onEachFeature: onEachFeature
+        });  
+		  var heat = L.heatLayer(coords, {
+			radius: 30,
+			blur: 25,
+			attribution: '<a href="https://overpass-api.de">Overpass API</a> ',
+		})
+		heat.addTo(mymap);
+        });
+
+L.control.scale().addTo(mymap);
+</script>
