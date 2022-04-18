@@ -17,4 +17,9 @@
         <a href="{{ site.data.contact.contact_button_link }}" class="button">Contact</a>
       </div>
     {% endif %}
+    {% if include.show_image %}
+       <div class="team-image">
+            <img width="90" height="90" alt="Douglas Castillo" class="img-fluid mb-2" src="{{  .site.data.contact.image  | relative_url }}" />
+       </div>
+    {% endif %}
 </div>
