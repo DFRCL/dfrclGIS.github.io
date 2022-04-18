@@ -42,7 +42,7 @@ sass:
 
 plugins:
   - jekyll-environment-variables
-  - jekyll-image-optim
+  - jekyll-compress-images
 
 exclude:
   - Gemfile
@@ -62,8 +62,5 @@ highlighter: rouge
 kramdown:
   input: GFM
   
-# image_optim-jekyll-plugin customizations.
-image_optim:
-  archive_dir: "assets/optimized_images"
-  cache_file: "tmp/img-cache.yml"
-  image_glob: "/images/**/*.{gif,png,jpg,jpeg}"
+compress_images:
+  images_path: "images/**/*.{gif,png,jpg,jpeg,svg}"
