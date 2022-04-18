@@ -11,3 +11,19 @@ Domain of GIS data visualization, geoprocessing and spatial analysis.
 - Spatial analysis.
 - Suitability analysis.
 - Raster calculations.
+
+## Software
+
+{% raw %}
+<div class="software-card">
+	<div class="tag">QGIS
+		<div class="software-image">
+			<img alt="QGIS" src="/images/QGIS_logo_new.svg">
+		</div>
+	</div>
+  	<div class="tag">ArcGIS
+		<div class="software-image">
+			<img alt="ArcGIS" src="/images/Esri-01.svg">
+		</div>
+</div>
+{% endraw %}
