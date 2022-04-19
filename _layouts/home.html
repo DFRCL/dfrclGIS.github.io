@@ -47,5 +47,34 @@ bodyClass: "page-home"
   </div>
 </div>
 
+<div class="strip">
+  <div class="container pt-6 pb-6 pb-md-10">
+    <div class="row justify-content-start">
+       {% for tag in site.tags %}
+    <div class="col-12 col-md-6 mb-3">
+      <div class="project-card">
+        <div class="project-content">
+          <h2 class="service-title">
+            <a href="{{ tag.url | relative_url }}">{{ tag.title }}</a>
+          </h2>
+          {% if tag.intro_image %}
+	<div class = "project-image">
+	        <a href="{{ tag.url | relative_url }}"><img src="{{ tag.intro_image | relative_url }}" title="{{ tag.title }}" alt="{{ tag.title }}" width="40px" height="40px"/></a>
+	</div>
+	  {% endif %}
+          <p>{{ tag.description}}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-auto">
+        <a class="button button-primary" href="{{ "projects" | relative_url }}">View all projects</a>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 {% endif %}
