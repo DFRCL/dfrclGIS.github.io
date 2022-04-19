@@ -1,6 +1,6 @@
 ---
 title: Guatemala 2018 census web map
-tags: Web-Maps, leaflet
+tags: Web-Maps Leaflet
 intro_image: "/images/censo2018.svg"
 intro_image_absolute: false
 intro_image_hide_on_mobile: false
