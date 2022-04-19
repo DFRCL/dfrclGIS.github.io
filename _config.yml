@@ -27,6 +27,8 @@ defaults:
   - scope:
       path: ""
       type: "tags"
+     values:
+      layout: "tag" 
   - scope:
       path: ""
       type: "projects"
