@@ -38,9 +38,9 @@ defaults:
       layout: "project"
   - scope:
       path: ""
-      type: "projects"
+      type: "tags"
     values:
-      layout: "project"
+      layout: "tag"
 
 
 sass:
