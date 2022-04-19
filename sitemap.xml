@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://douglascl.xyz/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/contact/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Cartography/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Desktop-GIS/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Google-Earth-Engine/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Leaflet/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Python/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/QGIS/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Web-GIS/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/tags/Web-Maps/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/GIS/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/CAD/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/remote-sensing/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/geospatial-data/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/digital-cartography/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/skills/programming/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/1-50-000-atlas-of-guatemala/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/Burn-scar-detection-using-Google%20Earth%20Engine/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/cluster-analysis-with-python/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/geoserver/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/guatemala-2018-census-web-map/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/openstreetmaps-contributions/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://douglascl.xyz/projects/sentinel-2-composite/</loc>
+  <lastmod>2022-04-19T06:32:42+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
