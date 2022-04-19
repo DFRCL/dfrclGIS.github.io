@@ -1,32 +1,49 @@
 ---
-layout: page
-title: Tags
-permalink: /tags/
+layout: default
+bodyClass: "tag"
 ---
-{% capture site_tags %}{% for tag in site.tags %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
-{% assign tag_words = site_tags | split:',' | sort %}
+<div class="intro">
+  <div class="container">
+    <div class="row justify-content-start">
+      <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+        {{ content }}
+      </div>
+      {% if page.intro_image %}
+      <div class="col-12 col-md-5 col-lg-6 order-1 order-md-2 position-relative">
+        <img alt={{ page.title }} class="intro-image{% if page.intro_image_absolute %} intro-image-absolute{% endif %}{% if page.intro_image_hide_on_mobile %} intro-image-hide-mobile{% endif %}" src="{{ page.intro_image | relative_url }}" />
+      </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
 
-<div class="tags">
-  <ul class="tags-list">
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-    <li class="tags-item"><a href="#{{ this_word | cgi_escape }}" class="tags-link">{{ this_word }} <span>{{ site.tags[this_word].size }}</span></a></li>
-  {% endunless %}{% endfor %}
-  </ul>
-
-  <hr>
-
-  {% for item in (0..site.tags.size) %}{% unless forloop.last %}
-    {% capture this_word %}{{ tag_words[item] | strip_newlines }}{% endcapture %}
-  <h2 class="tags-title" id="{{ this_word | cgi_escape }}">{{ this_word }}</h2>
-  <div class="tags-group">
-    {% for project in site.tags[this_word] %}{% if project.title != null %}
-    <div class="tag-item">
-      <div class="tag-text">
-        <a class="tag-link" href="{{ root_url }}{{ project.url | prepend: site.baseurl }}">{{ post.title }}</a> | <small><span class="tag-date">{{ post.date | date_to_string }}</span></small>
+<div class="container pt-6 pb-6">
+  <div class="row">
+    {% for project in site.projects %}
+    {% if post.tags contains page.name or page.name == post.tags %}
+    <div class="col-12 col-md-6 mb-3">
+      <div class="project-card">
+        <div class="project-content">
+          <h2 class="service-title">
+            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+          </h2>
+	  {% if project.tags.size >= 1 %}
+		<div class="post-tag">
+			{% for tag in project.tags %}
+				<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
+			{% endfor %}
+		</div>
+	  {% endif %}
+          {% if project.intro_image %}
+	<div class = "project-image">
+	        <a href="{{ project.url | relative_url }}"><img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/></a>
+	</div>
+	  {% endif %}
+          <p>{{ project.description}}</p>
+        </div>
       </div>
     </div>
-    {% endif %}{% endfor %}
+    {% endif %}
+    {% endfor %}
   </div>
-  {% endunless %}{% endfor %}
-</div> <!-- /.tags -->
+</div>
