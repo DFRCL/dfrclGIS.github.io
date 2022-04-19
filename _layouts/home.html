@@ -53,7 +53,8 @@ bodyClass: "page-home"
     <div class="row justify-content-start">
        {% for tag in site.tags %}
      <div class="col-12 col-md-6 col-lg-4 mb-2">
-      <class="tags-card"  href="{{ tag.url | relative_url }}">
+      <a href="{{ tag.url | relative_url }}"
+      <div class="tags-card">
         <div class="tags-content">
            {{ tag.title }}
           {% if tag.intro_image %}
@@ -64,6 +65,7 @@ bodyClass: "page-home"
           <p>{{ tag.description}}</p>
         </div>
       </div>
+      </a>
     </div>
     {% endfor %}
     </div>
