@@ -36,11 +36,12 @@ defaults:
       type: "projects"
     values:
       layout: "project"
-   - scope:
+  - scope:
       path: ""
-      type: "tags"
+      type: "projects"
     values:
-      layout: "tag"
+      layout: "project"
+
 
 sass:
   indentWidth: 4
