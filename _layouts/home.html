@@ -54,12 +54,10 @@ bodyClass: "page-home"
      <div class="col-12 col-md-6 col-lg-4 mb-2">
       <div class="tags-card">
         <div class="tags-content">
-          <h2 class="service-title">
-            <a href="{{ tag.url | relative_url }}">{{ tag.title }}</a>
-          </h2>
+           {{ tag.title }}
           {% if tag.intro_image %}
-	<div class = "tag-image">
-	        <a href="{{ tag.url | relative_url }}"><img src="{{ tag.intro_image | relative_url }}" title="{{ tag.title }}" alt="{{ tag.title }}"/></a>
+	<div class = "tag-image" href="{{ tag.url | relative_url }}">
+	        <img src="{{ tag.intro_image | relative_url }}" title="{{ tag.title }}" alt="{{ tag.title }}"/>
 	</div>
 	  {% endif %}
           <p>{{ tag.description}}</p>
