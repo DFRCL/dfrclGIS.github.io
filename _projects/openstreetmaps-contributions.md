@@ -1,6 +1,6 @@
 ---
 title: OpenStreetMaps Contributions
-tags: Web-Maps
+tags: Web-Maps Cartography
 intro_image: "/images/Openstreetmap_logo.svg"
 description: My OpenStreetMaps contributions
 intro_image_absolute: false
