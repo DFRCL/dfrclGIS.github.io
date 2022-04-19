@@ -1,7 +1,7 @@
 ---
 title: Cluster analysis with Python
 tags: Python
-intro_image: "/images/images/clusters.png"
+intro_image: "/images/hdbscan.svg"
 intro_image_absolute: true
 intro_image_hide_on_mobile: false
 description: 'A brief example of implementation of different cluster analysis algorithms
