@@ -31,7 +31,7 @@ High ability to conceptualize remote sensing solutions, choose sensors and proce
 	</div>
 	<div class="tag">SNAP
 		<div class="software-image">
-			<img alt="SNAP" src="/images/snap.jpg">
+			<img alt="SNAP" src="/images/SNAP.jpg">
 		</div>
 	</div>
 	
