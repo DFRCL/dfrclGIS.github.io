@@ -20,7 +20,7 @@ bodyClass: "tag"
 <div class="container pt-6 pb-6">
   <div class="row">
     {% for project in site.projects %}
-    {% if post.tags contains page.name or page.name == post.tags %}
+    {% if project.tags contains page.title or page.title == project.tags %}
     <div class="col-12 col-md-6 mb-3">
       <div class="project-card">
         <div class="project-content">
