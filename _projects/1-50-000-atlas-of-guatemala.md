@@ -4,7 +4,7 @@ tags: Desktop-GIS QGIS Cartography
 intro_image: "/images/grid.svg"
 description: Atlas of Guatemala at a scale of 1:50,000 showing relief, human settlements
   and road infrastructure.
-intro_image_absolute: true
+intro_image_absolute: false
 intro_image_hide_on_mobile: true
 
 ---
