@@ -1,0 +1,10 @@
+---
+layout: default
+bodyClass: "tags"
+---
+
+{% for tag in site.tags %}
+    {% if post.tags contains tag.name or tag.name == post.tags %}
+        <a href="{{ site.url }}{{ site.baseurl }}{{ tag.url }}">{{ tag.name }}</a>
+    {% endif %}
+{% endfor %}
