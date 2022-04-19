@@ -52,14 +52,14 @@ bodyClass: "page-home"
     <div class="row justify-content-start">
        {% for tag in site.tags %}
     <div class="col-12 col-md-6 mb-3">
-      <div class="project-card">
-        <div class="project-content">
+      <div class="tags-card">
+        <div class="tags-content">
           <h2 class="service-title">
             <a href="{{ tag.url | relative_url }}">{{ tag.title }}</a>
           </h2>
           {% if tag.intro_image %}
-	<div class = "project-image">
-	        <a href="{{ tag.url | relative_url }}"><img src="{{ tag.intro_image | relative_url }}" title="{{ tag.title }}" alt="{{ tag.title }}" width="40px" height="40px"/></a>
+	<div class = "tag-image">
+	        <a href="{{ tag.url | relative_url }}"><img src="{{ tag.intro_image | relative_url }}" title="{{ tag.title }}" alt="{{ tag.title }}"/></a>
 	</div>
 	  {% endif %}
           <p>{{ tag.description}}</p>
