@@ -20,20 +20,13 @@ bodyClass: "tag"
 <div class="container pt-6 pb-6">
   <div class="row">
     {% for project in site.projects %}
-    {% if project.tags contains page.title or page.title == project.tags %}
+    {% if project.tags contains page.name or page.name == project.tags %}
     <div class="col-12 col-md-6 mb-3">
       <div class="project-card">
         <div class="project-content">
           <h2 class="service-title">
             <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
           </h2>
-	  {% if project.tags.size >= 1 %}
-		<div class="post-tag">
-			{% for tag in project.tags %}
-				<a href="{{ site.baseurl }}/tags#{{tag}}" class="tag">{{ tag }}</a>
-			{% endfor %}
-		</div>
-	  {% endif %}
           {% if project.intro_image %}
 	<div class = "project-image">
 	        <a href="{{ project.url | relative_url }}"><img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/></a>
