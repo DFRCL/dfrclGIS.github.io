@@ -1,0 +1,88 @@
+<!-- DOCTYPE html-->
+<head>
+   <script src='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js'></script>
+   <link href='https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css' 
+    rel='stylesheet' />
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   <script src='https://douglascl.xyz/assets/js/osmtogeojson.js'></script> 
+</head>
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+.mapboxgl-popup {
+max-width: 400px;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+</style>
+<div id='map' style='width: 100%; height: 100%;'></div>
+<script>
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A';
+var map = new mapboxgl.Map({
+container: 'map',
+center: [-89.9221243,15.8760489],
+bounds: [[-92.329102,13.658629],[-88.022461,18.042126]],
+zoom: 5.5,
+style: 'mapbox://styles/dfrcl/ckcfbq1ws027x1ipd9miaiewj'
+
+});
+
+map.on('load', () => {
+
+
+var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="node"><user name="dfrcl"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
+
+
+		
+$.get(osmurl, function (osmDataAsJson) {
+    var resultAsGeojson = osmtogeojson(osmDataAsJson);
+		console.log(resultAsGeojson)
+		map.addSource('osm-contributions', {
+		type: 'geojson',
+		// Use a URL for the value for the `data` property.
+		data: resultAsGeojson
+});
+
+	map.addLayer(
+	{   
+	'id': 'osm-contributions-layer',
+	'type': 'heatmap',
+	'source': 'osm-contributions',
+	'paint':{'heatmap-opacity':0.5}
+	},
+	); 
+
+        })
+
+
+ 
+
+// When a click event occurs on a feature in the states layer,
+// open a popup at the location of the click, with description
+// HTML from the click event's properties.
+map.on('click', 'osm-contributions-layer', (e) => {
+new mapboxgl.Popup()
+.setLngLat(e.lngLat)
+.setHTML('<b>Click on link for more details: </b><br><a href = "https://openstreetmap.org/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.id+"<a>")
+.addTo(map);
+});
+
+// Change the cursor to a pointer when
+// the mouse is over the states layer.
+map.on('mouseenter', 'osm-contributions-layer', () => {
+map.getCanvas().style.cursor = 'pointer';
+});
+ 
+// Change the cursor back to a pointer
+// when it leaves the states layer.
+map.on('mouseleave', 'municipios-layer', () => {
+map.getCanvas().style.cursor = '';
+});
+
+
+
+});
+</script>
