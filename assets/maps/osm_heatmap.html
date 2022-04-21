@@ -42,9 +42,11 @@ $.get(osmurl, function (osmDataAsJson) {
             onEachFeature: onEachFeature
         });  
 		  var heat = L.heatLayer(coords, {
-			radius: 30,
-			blur: 25,
+			radius: 40,
+			blur: 50,
 			attribution: '<a href="https://overpass-api.de">Overpass API</a> ',
+			minOpacity: 0.01,
+			maxZoom: 12
 		})
 		heat.addTo(mymap);
         });
