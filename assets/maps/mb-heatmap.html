@@ -32,11 +32,8 @@ style: 'mapbox://styles/dfrcl/ckcfbq1ws027x1ipd9miaiewj'
 
 map.on('load', () => {
 
-
 var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="node"><user name="dfrcl"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
 
-
-		
 $.get(osmurl, function (osmDataAsJson) {
     var resultAsGeojson = osmtogeojson(osmDataAsJson);
 		console.log(resultAsGeojson)
@@ -55,34 +52,6 @@ $.get(osmurl, function (osmDataAsJson) {
 	},
 	); 
 
-        })
-
-
- 
-
-// When a click event occurs on a feature in the states layer,
-// open a popup at the location of the click, with description
-// HTML from the click event's properties.
-map.on('click', 'osm-contributions-layer', (e) => {
-new mapboxgl.Popup()
-.setLngLat(e.lngLat)
-.setHTML('<b>Click on link for more details: </b><br><a href = "https://openstreetmap.org/'+e.features[0].properties.id+'" target="_blank">'+e.features[0].properties.id+"<a>")
-.addTo(map);
-});
-
-// Change the cursor to a pointer when
-// the mouse is over the states layer.
-map.on('mouseenter', 'osm-contributions-layer', () => {
-map.getCanvas().style.cursor = 'pointer';
-});
- 
-// Change the cursor back to a pointer
-// when it leaves the states layer.
-map.on('mouseleave', 'municipios-layer', () => {
-map.getCanvas().style.cursor = '';
-});
-
-
-
+})
 });
 </script>
