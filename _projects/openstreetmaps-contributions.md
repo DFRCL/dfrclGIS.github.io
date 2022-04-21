@@ -16,6 +16,10 @@ The following map shows the geographic distribution of changes as a heatmap:
 <iframe src="https://douglascl.xyz/assets/maps/osm_heatmap.html" width="100%" height="600px"></iframe>
 {% endraw %}
 
+{% raw %}
+<iframe src="https://douglascl.xyz/assets/maps/mb-heatmap.html" width="100%" height="600px"></iframe>
+{% endraw %}
+
 And the following map shows my overall contributions to openstreetmaps, in more detail, you can zoom to see the features I have added or modified in OSM and click to see complete properties of features in OSM:
 {% raw %}
 <iframe src="https://douglascl.xyz/assets/maps/contributions.html" width="100%" height="600px"></iframe>
