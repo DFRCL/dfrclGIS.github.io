@@ -16,7 +16,9 @@ The census data layer was uploaded via QGIS to a PostGIS database, and then plot
 <iframe src="https://douglascl.xyz/assets/maps/censo2018.html" width="100%" height="600px"></iframe> {% endraw %}
 
 The code used for generating the web map is the following:
-
+{% raw %}
+<iframe src="https://douglascl.xyz/assets/maps/mb-heatmap.html" width="100%" height="600px"></iframe>
+{% endraw %}
 
 ```javascript
 
