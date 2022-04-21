@@ -129,5 +129,7 @@ The code used for generating the web map is the following:
 ```
 
 Another heatmap map was created to show population distribution in the country. The hotspot analysis was performed using QGIS and then uploaded to Mapbox to create a custom style to be displayed with Leaflet.js on website.
+{% raw %}
 
-{% include /maps/gt-pdensity.html %}
+<iframe src="https://douglascl.xyz/assets/maps/population-heatmap.html" width="100%" height="600px"></iframe> {% endraw %}
+
