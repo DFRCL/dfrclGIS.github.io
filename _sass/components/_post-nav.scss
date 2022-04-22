@@ -17,6 +17,11 @@
       -webkit-transition: all 0.15s ease;
       transition: all 0.15s ease;
     }
+    .post-nav-arrow {
+      color: $white;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
+    }
   }
   
   .post-nav-arrow {
@@ -29,6 +34,7 @@
         height: 50px;
         padding:10px;
       }
+    
   }
   .post-nav-title {
     font-size: 18px;
