@@ -8,7 +8,11 @@
 <div id="map2" style="width: 100%; height: 100%"></div>
 
 <script>
-var heatmap = L.map('map2').setView([15.8760489,-89.9221243], 7);
+var heatmap = L.map('map2').fitBounds([
+    [13.658629, -92.329102],
+    [18.042126, -88.022461]
+]);
+
 
 L.tileLayer('https://api.mapbox.com/styles/v1/dfrcl/ckch0qqns01f01imesej1nqwh/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A', {crs: L.CRS.EPSG3857,
 		maxZoom: 18,
