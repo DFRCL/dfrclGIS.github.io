@@ -3,7 +3,7 @@ title: Guatemala 2018 census web map
 tags: Web-Maps Leaflet Cartography
 intro_image: "/images/censo2018.svg"
 intro_image_absolute: false
-intro_image_hide_on_mobile: false
+intro_image_hide_on_mobile: true
 description: Interactive web map of Guatemala's census data from 2018, using Leaflet.js
 
 ---
