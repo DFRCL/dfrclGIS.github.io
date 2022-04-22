@@ -34,7 +34,7 @@ bodyClass: "project-page"
 			  
 			 		{% if page.previous.url %}
 					<a href="{{ site.baseurl }}{{page.previous.url}}" class="prev">
-					<div class="col-12 col-md-6 mb-3">
+					<div class="sm1">
 						<div class="post-nav-arrow"><img src="/images/arrow-left.svg"/>Previous Project </div>
 						<h2 class="post-nav-title">{{page.previous.title}}</h2>
 					</div>
@@ -42,7 +42,7 @@ bodyClass: "project-page"
 			
 					{% endif %} {% if page.next.url %}
 					<a href="{{ site.baseurl }}{{page.next.url}}" class="next">
-					<div class="col-12 col-md-6 mb-3">
+					<div class="sm1">
 						<div class="post-nav-arrow">Next Project <img src="/images/arrow-right.svg"/></div>
 						<h2 class="post-nav-title">{{page.next.title}}</h2>
 					</div>
