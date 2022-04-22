@@ -10,9 +10,9 @@
   padding: 15px;
   background: #26272B;
   &:hover {
-    background: darken(#26272B, 3%);
+    background: $white;
     .post-nav-title {
-      color: $primary-color;
+      color: $primary;
       transition: $global-transition;
     }
   }
