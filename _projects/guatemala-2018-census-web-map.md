@@ -128,6 +128,8 @@ The code used for generating the web map is the following:
     </script>
 ```
 
+## Population heatmap as tile service
+
 Another heatmap map was created to show population distribution in the country. The hotspot analysis was performed using QGIS and then uploaded to Mapbox to create a custom style to be displayed with Leaflet.js on website.
 {% raw %}
 
