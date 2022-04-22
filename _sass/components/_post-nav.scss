@@ -13,7 +13,7 @@
   &:hover {
     background: $primary;
     .post-nav-title {
-      color: $primary;
+      color: $white;
       -webkit-transition: all 0.15s ease;
       transition: all 0.15s ease;
     }
@@ -25,8 +25,9 @@
     padding: 10px;
     color: $primary;
     img {
-        width: 20px;
-        height: 20px;
+        width: 50px;
+        height: 50px;
+        padding:10px;
       }
   }
   .post-nav-title {
