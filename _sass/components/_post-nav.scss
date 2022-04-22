@@ -8,7 +8,7 @@
 .prev, .next {
   flex-basis: 100%;
   padding: 15px;
-  background: #26272B;
+  background: $white;
   &:hover {
     background: $white;
     .post-nav-title {
