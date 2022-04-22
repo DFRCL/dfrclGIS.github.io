@@ -30,22 +30,23 @@ bodyClass: "project-page"
 </div>
 
 <div class="post-navigation">
-		 <div class="row justify-content-start">
+	<div class="container pt-6 pb-6">
+		<div class="row">
 			  
 			 		{% if page.previous.url %}
 					<a href="{{ site.baseurl }}{{page.previous.url}}" class="prev">
-					 <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
+					<div class="col-12 col-md-6 mb-3">
 						<div class="post-nav-arrow"><i class="ion ion-ios-arrow-round-back"></i> Previous Project </div>
 						<h2 class="post-nav-title">{{page.previous.title}}</h2>
-					 </div>
+					</div>
 					</a>
 			
 					{% endif %} {% if page.next.url %}
 					<a href="{{ site.baseurl }}{{page.next.url}}" class="next">
-					<div class="col-12 col-md-5 col-lg-6 order-1 order-md-2>
+					<div class="col-12 col-md-6 mb-3">
 						<div class="post-nav-arrow">Next Project <i class="ion ion-ios-arrow-round-forward"></i></div>
 						<h2 class="post-nav-title">{{page.next.title}}</h2>
-					</a>
+					</div>
 					</a>
 					{% endif %}
 				</div>
