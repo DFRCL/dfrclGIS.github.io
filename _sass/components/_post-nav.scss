@@ -13,7 +13,8 @@
     background: $white;
     .post-nav-title {
       color: $primary;
-      transition: $global-transition;
+      -webkit-transition: all 0.15s ease;
+      transition: all 0.15s ease;
     }
   }
   .post-nav-arrow {
@@ -23,7 +24,8 @@
   .post-nav-title {
     font-size: 18px;
     color: $text;
-    transition: $global-transition;
+    -webkit-transition: all 0.15s ease;
+    transition: all 0.15s ease;
   }
 }
 
