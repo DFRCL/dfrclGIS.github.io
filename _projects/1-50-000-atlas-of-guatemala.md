@@ -17,7 +17,7 @@ This atlas contains 223 sheets distributed through a grid index to automate the 
 You can access the complete atlas here:
 
 {% raw %}
-<div class="call-box-bottom"><a href="https://drive.google.com/drive/folders/1R6WtR8lghIKzZNXNHEI5zWbMZV8_ImOT" class="button">View complete atlas</a></div>
+<a href="https://drive.google.com/drive/folders/1R6WtR8lghIKzZNXNHEI5zWbMZV8_ImOT" class="button"><div class="call-box-bottom">View complete atlas</div></a>
 {% endraw %}
 
 ![](/images/images/hoja176.png)![](/images/images/hoja190.png)
