@@ -2,7 +2,8 @@
   background:  $white-offset;
   height: 100%;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 9px;
+  border: 1px solid $primary;
   }
 
  .project-card:hover{
@@ -17,9 +18,7 @@
     flex: 0 0 auto;
     display: flex;
     padding: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
+    justify-content: center;
     object-fit: contain;
   img {
     max-width:100%;
@@ -28,6 +27,10 @@
   }
 
 .project-content{
+  background:$white-offset;
+  border-bottom-right-radius: 9px;
+  border-bottom-left-radius: 9px;
+  padding: 20px;
 }
 
 .post-tag {
