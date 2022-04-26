@@ -2,6 +2,7 @@
   height: 100%;
   border-radius: 9px;
   border: 1px solid $primary;
+  background: $white-offset;
   }
 
  .project-card:hover{
@@ -29,7 +30,6 @@
 
 .project-content{
   padding: 20px;
-  background: $white-offset;
 }
 
 .post-tag {
