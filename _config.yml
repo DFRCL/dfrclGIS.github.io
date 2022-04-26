@@ -48,10 +48,12 @@ sass:
   style: compressed # possible values: nested expanded compact compressed
   precision: 10
 
+url: "https://douglascl.xyz" # the base hostname & protocol for your site
+
 plugins:
   - jekyll-environment-variables
-  - jekyll-compress-images
-
+  - jekyll-sitemap
+  
 exclude:
   - Gemfile
   - Gemfile.lock
