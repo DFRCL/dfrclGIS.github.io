@@ -8,6 +8,13 @@ bodyClass: "project-page"
     <div class="row justify-content-start">
       <div class="col-12 col-md-7 col-lg-6 order-2 order-md-1">
         <h1>{{page.title}}</h1>
+	 {% if project.tags.size >= 1 %}
+		<div class="post-tag">
+			{% for tag in project.tags %}
+				<a href="{{ site.baseurl }}/tags/{{tag}}" class="tag">{{ tag }}</a>
+			{% endfor %}
+		</div>
+	  {% endif %}
 	<p>{{page.description}}</p>
       </div>
       {% if page.intro_image %}
