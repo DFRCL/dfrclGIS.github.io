@@ -4,6 +4,15 @@
   padding: 20px;
   border-radius: 8px;
   }
+
+ .project-card:hover {
+ color:#ffffff;
+ background-color: darken($white-offset,10%);
+ transform:translateY(10px);
+ transform:scale(1.05);
+ transition:all 0.25s ease
+}
+
 .project-image {
     flex: 0 0 auto;
     display: flex;
