@@ -1,7 +1,7 @@
 ---
 title: Burn scar detection using Google Earth Engine
 tags: Google-Earth-Engine
-intro_image: "/images/images/fire.svg"
+intro_image: "/images/fire.svg"
 description: Burn scar analysis with NBR index using Sentinel-2 imagery and processing
   with Google Earth Engine
 intro_image_absolute: true
