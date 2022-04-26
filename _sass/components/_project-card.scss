@@ -44,7 +44,8 @@
       border: 1px solid $primary;
       border-radius: 8px;
       text-transform: capitalize;
-      color: $primary;
+      color: $white;
+      background: $primary;
       -webkit-transition: all 0.15s ease;
       transition: all 0.15s ease;
       &:last-child {
