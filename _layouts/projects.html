@@ -21,8 +21,13 @@ bodyClass: "projects"
 <div class="container pt-6 pb-6">
   <div class="row">
     {% for project in site.projects %}
-    <div class="col-12 col-md-6 mb-3">
+    <div class="col-12 col-md-4 mb-3">
       <div class="project-card">
+	{% if project.intro_image %}
+	<div class = "project-image">
+	        <a href="{{ project.url | relative_url }}"><img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/></a>
+	</div>
+	  {% endif %}
         <div class="project-content">
           <h2 class="service-title">
             <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
@@ -33,11 +38,6 @@ bodyClass: "projects"
 				<a href="{{ site.baseurl }}/tags/{{tag}}" class="tag">{{ tag }}</a>
 			{% endfor %}
 		</div>
-	  {% endif %}
-          {% if project.intro_image %}
-	<div class = "project-image">
-	        <a href="{{ project.url | relative_url }}"><img src="{{ project.intro_image | relative_url }}" title="{{ project.title }}" alt="{{ project.title }}"/></a>
-	</div>
 	  {% endif %}
           <p>{{ project.description}}</p>
         </div>
