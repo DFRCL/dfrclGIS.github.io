@@ -31,7 +31,7 @@ bodyClass: "projects"
 	  {% endif %}
         <div class="project-content">
           <h2 class="service-title">
-            <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+            {{ project.title }}
           </h2>
 	  {% if project.tags.size >= 1 %}
 		<div class="post-tag">
