@@ -6,9 +6,9 @@
 
  .project-card:hover{
  color:#ffffff;
- background-color: darken($white-offset,10%);
+ background-color: darken($white-offset,20%);
  transform:translateY(10px);
- transform:scale(1.05);
+ transform:scale(1.02);
  transition:all 0.15s ease
 }
 
@@ -29,6 +29,7 @@
 
 .project-content{
   padding: 20px;
+  background: $white-offset;
 }
 
 .post-tag {
