@@ -33,12 +33,15 @@ pre {
   @include font-size($code-font-size);
   color: $pre-color;
   padding: 20px;
+  border-radius:10px;
 
   // Account for some code outputs that place code tags in pre tags
   code {
     @include font-size(inherit);
     color: inherit;
     word-break: normal;
+    padding: 20px;
+    border-radius:10px;
   }
 }
 
