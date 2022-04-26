@@ -27,3 +27,11 @@
     margin-top: auto;
   }
 }
+
+ .feature:hover {
+ color:#ffffff;
+ background-color: $primary
+ transform:translateY(10px);
+ transform:scale(1.05);
+ transition:all 0.15s ease
+}
