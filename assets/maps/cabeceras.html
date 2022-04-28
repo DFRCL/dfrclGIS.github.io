@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapa de cabeceras departamentales</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/6.2.0/css/flag-icons.min.css" rel="stylesheet">
+<style>
+body { margin: 0; padding: 0; }
+#map { position: absolute; top: 0; bottom: 0; width: 100%; }
+</style>
+</head>
+<body>
+<style>
+#map {
+position: absolute;
+left: 25%;
+top: 0;
+bottom: 0;
+width: 75%;
+}
+
+h1 {
+font-size: 12pt;
+margin: 0;
+font-weight: 400;
+line-height: 12pt;
+padding: 15px 2px;
+}
+
+.heading {
+background: #fff;
+border-bottom: 1px solid #eee;
+min-height: 12pt;
+line-height: 12pt;
+padding: 0 10px;
+background-color: #405d27;
+color: #fff;
+}
+
+.map-overlay {
+position: absolute;
+width: 25%;
+top: 0;
+bottom: 0;
+left: 0;
+font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+background-color: #efefef;
+color: black;
+max-height: 100%;
+overflow: hidden;
+}
+ 
+.map-overlay fieldset {
+display: none;
+background: #ddd;
+border: none;
+padding: 0px;
+margin: 0;
+}
+ 
+.map-overlay input {
+display: block;
+border: none;
+width: 100%;
+border-radius: 3px;
+padding: 10px;
+margin: 0;
+box-sizing: border-box;
+}
+ 
+.map-overlay .listing {
+overflow: auto;
+max-height: 100%;
+}
+ 
+.map-overlay .listing > * {
+display: block;
+padding: 5px 10px;
+margin: 0;
+}
+ 
+.map-overlay .listing a {
+border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+color: black;
+text-decoration: none;
+}
+ 
+.map-overlay .listing a:last-child {
+border: none;
+}
+ 
+.map-overlay .listing a:hover {
+background: #f0f0f0;
+}
+</style>
+ 
+<div id="map"></div>
+ 
+<div class="map-overlay">
+<fieldset>
+
+<div class="heading">
+<h1>Cabeceras departamentales de Guatemala <span class="fi fi-gt"></span></h1>
+</div>
+<input id="feature-filter" type="text" placeholder="Filter results by name">
+</fieldset>
+<div id="feature-listing" class="listing"></div>
+</div>
+ 
+<script>
+
+//Add access token
+mapboxgl.accessToken = 'pk.eyJ1IjoiZGZyY2wiLCJhIjoiY2l4cnl0b2k0MDVuZjJ3bHZ2Yjlob2JnbyJ9.RGbB8O1zRNGbtVTXX7o-_A';
+
+
+//Initialize map
+const map = new mapboxgl.Map({
+container: 'map',
+style: 'mapbox://styles/mapbox/streets-v11',
+center: [-89.9221243,15.8760489],
+bounds: [[-92.329102,13.658629],[-88.022461,18.042126]],
+maxZoom: 15,
+minZoom: 1,
+zoom: 3
+});
+
+map.addControl(new mapboxgl.NavigationControl());
+
+ 
+// Holds visible airport features for filtering
+let airports = [];
+ 
+// Create a popup, but don't add it to the map yet.
+const popup = new mapboxgl.Popup({
+closeButton: false
+});
+ 
+
+const filterEl = document.getElementById('feature-filter');
+const listingEl = document.getElementById('feature-listing');
+ 
+function renderListings(features) {
+const empty = document.createElement('p');
+// Clear any existing listings
+listingEl.innerHTML = '';
+if (features.length) {
+for (const feature of features) {
+const itemLink = document.createElement('a');
+const label = `${feature.properties.nombre} (${feature.properties.nom_dep})`;
+itemLink.href = "#";
+itemLink.textContent = label;
+itemLink.addEventListener('click', () => {
+// Highlight corresponding feature on the map
+popup
+.setLngLat(feature.geometry.coordinates)
+.setText(label)
+.addTo(map);
+flyToStore(feature)
+});
+listingEl.appendChild(itemLink);
+}
+ 
+// Show the filter input
+filterEl.parentNode.style.display = 'block';
+} else if (features.length === 0 && filterEl.value !== '') {
+empty.textContent = 'No results found';
+listingEl.appendChild(empty);
+} else {
+empty.textContent = 'Drag the map to populate results';
+listingEl.appendChild(empty);
+ 
+// Hide the filter input
+filterEl.parentNode.style.display = 'none';
+ 
+// remove features filter
+map.setFilter('airport', ['has', 'codigo']);
+}
+}
+ 
+function normalize(string) {
+return string.toString().trim().toLowerCase();
+}
+ 
+// Because features come from tiled vector data,
+// feature geometries may be split
+// or duplicated across tile boundaries.
+// As a result, features may appear
+// multiple times in query results.
+function getUniqueFeatures(features, comparatorProperty) {
+const uniqueIds = new Set();
+const uniqueFeatures = [];
+for (const feature of features) {
+const id = feature.properties[comparatorProperty];
+if (!uniqueIds.has(id)) {
+uniqueIds.add(id);
+uniqueFeatures.push(feature);
+}
+}
+return uniqueFeatures;
+}
+ 
+map.on('load', () => {
+
+map.addSource('cabeceras', {
+'type': 'geojson',
+'data': 'https://dfrcl.github.io/geojsons.github.io/cabeceras.geojson'
+});
+
+map.addLayer({
+'id': 'airport',
+'source': 'cabeceras',
+'type': 'circle',
+'paint': {
+'circle-color': '#4264fb',
+'circle-radius': 4,
+'circle-stroke-width': 2,
+'circle-stroke-color': '#ffffff'
+}
+});
+
+
+
+map.on('movestart', () => {
+// reset features filter as the map starts moving
+map.setFilter('airport', ['has', 'codigo']);
+});
+
+
+map.on('render', () => {
+const features = map.queryRenderedFeatures({ layers: ['airport'] });
+const uniqueFeatures = getUniqueFeatures(features, 'codigo');
+renderListings(uniqueFeatures);
+});
+ 
+map.on('moveend', () => {
+const features = map.queryRenderedFeatures({ layers: ['airport'] });
+ 
+if (features) {
+const uniqueFeatures = getUniqueFeatures(features, 'codigo');
+// Populate features for the listing overlay.
+renderListings(uniqueFeatures);
+ 
+// Clear the input container
+filterEl.value = '';
+ 
+// Store the current features in sn `airports` variable to
+// later use for filtering on `keyup`.
+airports = uniqueFeatures;
+}
+});
+ 
+map.on('click', 'airport', (e) => {
+// Change the cursor style as a UI indicator.
+map.getCanvas().style.cursor = 'pointer';
+ 
+// Populate the popup and set its coordinates based on the feature.
+const feature = e.features[0];
+popup
+.setLngLat(feature.geometry.coordinates)
+.setText(
+`${feature.properties.nombre} (${feature.properties.nom_dep})`
+)
+.addTo(map);
+
+flyToStore(feature)
+});
+
+
+// Change the cursor to a pointer when
+// the mouse is over the states layer.
+map.on('mouseenter', 'airport', () => {
+map.getCanvas().style.cursor = 'pointer';
+});
+
+map.on('mouseleave', 'airport', () => {
+map.getCanvas().style.cursor = '';
+});
+ 
+filterEl.addEventListener('keyup', (e) => {
+const value = normalize(e.target.value);
+ 
+// Filter visible features that match the input value.
+const filtered = [];
+for (const feature of airports) {
+const name = normalize(feature.properties.nombre);
+const code = normalize(feature.properties.codigo);
+if (name.includes(value) || code.includes(value)) {
+filtered.push(feature);
+}
+}
+ 
+// Populate the sidebar with filtered results
+renderListings(filtered);
+ 
+// Set the filter to populate features into the layer.
+if (filtered.length) {
+map.setFilter('airport', [
+'match',
+['get', 'nombre'],
+filtered.map((feature) => {
+return feature.properties.nombre;
+}),
+true,
+false
+]);
+}
+});
+ 
+// Call this function on initialization
+// passing an empty array to render an empty state
+renderListings([]);
+});
+
+
+/**
+* Use Mapbox GL JS's `flyTo` to move the camera smoothly
+* a given center point.
+**/
+function flyToStore(currentFeature) {
+map.flyTo({
+center: currentFeature.geometry.coordinates,
+zoom: 15
+});
+}
+
+
+
+</script>
+ 
+</body>
+</html>
