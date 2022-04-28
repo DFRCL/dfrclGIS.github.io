@@ -78,7 +78,7 @@ legend.onAdd = function (map) {
     for (var i = 0; i < grades.length; i++) {
         div.innerHTML +=
             '<i style="background:' + getColor(grades[i] + 1) + '"></i> ' +
-            grades[i] + (grades[i + 1] ? '–' + grades[i + 1] + ' Hab/km²<br>' : '+');
+            grades[i] + (grades[i + 1] ? '–' + grades[i + 1] + ' people/km²<br>' : '+');
     }
 
     return div;
