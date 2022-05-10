@@ -1,5 +1,3 @@
-<!-- DOCTYPE html-->
-
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="">
 <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.1.0/leaflet.ajax.min.js"></script>
@@ -17,14 +15,13 @@ var mymap = L.map('map1',{zoomSnap: 0.1}).fitBounds([
     [18.042126, -88.022461]
 ]);
 
-function getColor(d) {
-    return d == 'Gigabit Black'  ? '#000000' :
-                      '#de1414';
+function notNode(geoJsonFeature) {
+  if (geoJsonFeature.geometry.type != "Point") return true
 }
 
 function style(feature) {
     return {
-        fillColor: getColor(feature.properties.Lot32_subsidy_control_status),
+        fillColor: '#de1414',
         weight: 1.2,
         opacity: 1,
         color: 'red',
@@ -48,7 +45,7 @@ L.tileLayer('https://api.mapbox.com/styles/v1/dfrcl/ckcfbq1ws027x1ipd9miaiewj/ti
 
 
 
-var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="way"><user name="dfrcl"/></query><query type="relation"><user name="dfrcl"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
+var osmurl = 'https://overpass-api.de/api/interpreter?data=<osm-script output="json"><union><query type="way"><user name="dfrcl"/></query><query type="relation"><user name="dfrcl"/><has-kv k="type" modv="not" regv="node"/></query></union><print mode="body"/><recurse type="down"/><print mode="skeleton"/></osm-script>';
 
 $.get(osmurl, function (osmDataAsJson) {
           var resultAsGeojson = osmtogeojson(osmDataAsJson);
@@ -56,9 +53,11 @@ $.get(osmurl, function (osmDataAsJson) {
 			maxZoom: 10,
 			attribution: '<a href="https://overpass-api.de">Overpass Turbo</a> ',
             style: style,
-            onEachFeature: onEachFeature
+            onEachFeature: onEachFeature,
+			filter: notNode
         });       
 		geojsonLayer.addTo(mymap);
+		console.log(geojsonLayer)
         });
 
 L.control.scale().addTo(mymap);
